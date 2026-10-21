@@ -36,6 +36,7 @@ describe('ApiClient', () => {
     await apiClient.post('/auth/test', { data: 'test' });
     const postCall = fetchMock.mock.calls.find((call) => call[0].includes('/auth/test'));
     expect(postCall).toBeDefined();
+    if (!postCall) throw new Error('Expected postCall to be defined');
     expect(postCall[1].credentials).toBe('include');
     expect(postCall[1].headers['X-XSRF-TOKEN']).toBe('test-csrf-token-123');
   });
