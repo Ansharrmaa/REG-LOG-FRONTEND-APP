@@ -7,9 +7,22 @@ class ApiClient {
   private csrfHeaderName: string = 'X-XSRF-TOKEN';
   private csrfPromise: Promise<string | null> | null = null;
 
+  private getCsrfFromCookie(): string | null {
+    if (typeof document === 'undefined') return null;
+    const match = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]*)/);
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+
   public async getCsrfToken(forceRefresh = false): Promise<string | null> {
-    if (this.csrfToken && !forceRefresh) {
-      return this.csrfToken;
+    if (!forceRefresh) {
+      const fromCookie = this.getCsrfFromCookie();
+      if (fromCookie) {
+        this.csrfToken = fromCookie;
+        return this.csrfToken;
+      }
+      if (this.csrfToken) {
+        return this.csrfToken;
+      }
     }
 
     if (this.csrfPromise && !forceRefresh) {
