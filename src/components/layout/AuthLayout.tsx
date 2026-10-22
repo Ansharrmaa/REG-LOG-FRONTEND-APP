@@ -16,28 +16,28 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
   badge = 'Siya Vastra Privé Access',
 }) => {
   return (
-    <div className="min-h-screen flex flex-col selection:bg-amber-600 selection:text-white relative overflow-hidden bg-[#fdfbf7]">
-      {/* Ambient background glow elements for Glassmorphism */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl -z-10 pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-96 h-96 bg-orange-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
-      <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-rose-200/25 rounded-full blur-3xl -z-10 pointer-events-none" />
+    <div className="min-h-screen flex flex-col selection:bg-maroon-800 selection:text-white relative overflow-hidden bg-[#fdfaf9]">
+      {/* Ambient background glow elements in soft rose/crimson for Glassmorphism */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-rose-200/35 rounded-full blur-3xl -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-pink-100/30 rounded-full blur-3xl -z-10 pointer-events-none" />
+      <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-rose-100/25 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       {/* Dedicated Clean Auth Header — NO store navbar */}
       <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 pt-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-700 via-orange-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-800/20 group-hover:scale-105 transition-transform duration-300">
-            <span className="font-serif font-black text-base italic tracking-tighter">SV</span>
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-maroon-900 via-rose-800 to-rose-700 flex items-center justify-center text-white shadow-md shadow-maroon-900/25 group-hover:scale-105 transition-transform duration-300">
+            <span className="font-serif font-black text-base italic tracking-tighter text-amber-200">SV</span>
           </div>
           <div>
-            <span className="text-xl font-serif font-extrabold tracking-tight text-slate-900 group-hover:text-amber-800 transition-colors">
-              Siya <span className="text-amber-700">Vastra</span>
+            <span className="text-xl font-serif font-extrabold tracking-tight text-slate-900 group-hover:text-maroon-800 transition-colors">
+              Siya <span className="text-maroon-800">Vastra</span>
             </span>
           </div>
         </Link>
 
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-amber-800 px-3 py-1.5 rounded-xl glass-pill hover:bg-white transition-all"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-maroon-800 px-3 py-1.5 rounded-xl glass-pill hover:bg-white transition-all border border-rose-200/50"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Home</span>
@@ -49,14 +49,14 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
           {/* Left Brand Showcase Panel (Visible on lg screens) */}
           <div className="hidden lg:flex lg:col-span-5 flex-col justify-between space-y-8 pr-4">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-amber-200/60 text-amber-900 text-xs font-semibold shadow-sm">
-                <Sparkles className="w-4 h-4 text-amber-600" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-rose-200 text-maroon-900 text-xs font-semibold shadow-sm">
+                <Sparkles className="w-4 h-4 text-maroon-700" />
                 <span>{badge}</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
                 Welcome to{' '}
-                <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800">
+                <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-maroon-900 via-rose-800 to-maroon-700">
                   Siya Vastra
                 </span>
                 .
@@ -69,9 +69,9 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
             </div>
 
             {/* E-Commerce Customer Perks Cards (Glassmorphism) */}
-            <div className="space-y-3.5 glass-surface p-5 rounded-3xl border border-white/60 shadow-lg">
+            <div className="space-y-3.5 glass-surface p-5 rounded-3xl border border-rose-200/40 shadow-lg">
               <div className="flex items-center gap-3.5 text-xs font-medium text-slate-800">
-                <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-rose-100 text-maroon-900 flex items-center justify-center flex-shrink-0 shadow-sm">
                   <Scissors className="w-4 h-4" />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
               </div>
 
               <div className="flex items-center gap-3.5 text-xs font-medium text-slate-800">
-                <div className="w-8 h-8 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-rose-100 text-maroon-900 flex items-center justify-center flex-shrink-0 shadow-sm">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
               </div>
 
               <div className="flex items-center gap-3.5 text-xs font-medium text-slate-800">
-                <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-rose-100 text-maroon-900 flex items-center justify-center flex-shrink-0 shadow-sm">
                   <Truck className="w-4 h-4" />
                 </div>
                 <div>

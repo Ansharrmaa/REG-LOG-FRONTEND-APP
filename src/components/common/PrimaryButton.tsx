@@ -23,13 +23,13 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 
   const variantMap = {
     primary:
-      'bg-brand-600 hover:bg-brand-700 text-white focus:ring-brand-500 shadow-brand-500/20 hover:shadow-md hover:shadow-brand-500/25',
+      'bg-gradient-to-r from-maroon-900 via-rose-800 to-maroon-800 hover:from-maroon-950 hover:to-rose-900 text-white focus:ring-rose-800 shadow-md shadow-maroon-900/20 hover:shadow-lg hover:shadow-maroon-900/30',
     secondary:
       'bg-slate-800 hover:bg-slate-900 text-white focus:ring-slate-700 shadow-slate-900/10',
     danger:
       'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500 shadow-red-500/20',
     outline:
-      'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 focus:ring-brand-500 shadow-sm',
+      'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 focus:ring-rose-800 shadow-sm',
   };
 
   const widthClass = fullWidth ? 'w-full' : '';
