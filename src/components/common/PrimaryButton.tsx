@@ -23,7 +23,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 
   const variantMap = {
     primary:
-      'bg-gradient-to-r from-maroon-900 via-rose-800 to-maroon-800 hover:from-maroon-950 hover:to-rose-900 text-white focus:ring-rose-800 shadow-md shadow-maroon-900/20 hover:shadow-lg hover:shadow-maroon-900/30',
+      'btn-maroon-solid focus:ring-rose-800 shadow-md shadow-rose-950/25 hover:shadow-lg',
     secondary:
       'bg-slate-800 hover:bg-slate-900 text-white focus:ring-slate-700 shadow-slate-900/10',
     danger:

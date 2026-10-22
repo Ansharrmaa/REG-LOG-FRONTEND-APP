@@ -156,7 +156,7 @@ export const VerifyOtpPage: React.FC = () => {
             type="button"
             disabled={resendCooldown > 0 || isResending}
             onClick={handleResend}
-            className="inline-flex items-center gap-1 font-semibold text-brand-600 hover:text-brand-700 disabled:text-slate-400 disabled:cursor-not-allowed transition-colors"
+            className="inline-flex items-center gap-1 font-bold text-rose-900 hover:text-rose-950 disabled:text-slate-400 disabled:cursor-not-allowed transition-colors"
           >
             <RotateCcw className={`w-3.5 h-3.5 ${isResending ? 'animate-spin' : ''}`} />
             <span>

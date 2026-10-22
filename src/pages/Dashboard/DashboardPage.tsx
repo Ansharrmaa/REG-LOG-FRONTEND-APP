@@ -53,19 +53,19 @@ export const DashboardPage: React.FC = () => {
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Welcome Banner */}
-        <div className="bg-gradient-to-r from-amber-950 via-slate-900 to-amber-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl mb-8 relative overflow-hidden glass-surface-elevated border border-amber-900/20">
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial-gradient from-amber-500/20 to-transparent pointer-events-none" />
+        <div className="bg-gradient-to-r from-rose-950 via-slate-900 to-rose-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl mb-8 relative overflow-hidden glass-surface-elevated border border-rose-900/20">
+          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial-gradient from-rose-500/20 to-transparent pointer-events-none" />
 
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold backdrop-blur-sm border border-amber-500/30">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 text-xs font-semibold backdrop-blur-sm border border-rose-500/30">
+                <Sparkles className="w-3.5 h-3.5 text-rose-300" />
                 <span>Siya Vastra Privé Circle Member</span>
               </div>
               <h1 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight">
                 Welcome back, {user.fullName}!
               </h1>
-              <p className="text-amber-100/80 text-sm max-w-xl font-light">
+              <p className="text-rose-100/80 text-sm max-w-xl font-light">
                 Your Siya Vastra privileged account is active. Manage your bespoke tailoring orders,
                 view curated festive recommendations, and keep your security settings up to date.
               </p>
@@ -74,7 +74,7 @@ export const DashboardPage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3">
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs transition-all shadow-md active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#881337] hover:bg-rose-950 text-white font-semibold text-xs transition-all shadow-md active:scale-[0.98]"
               >
                 <span>Shop Heritage Store</span>
               </Link>
@@ -114,7 +114,7 @@ export const DashboardPage: React.FC = () => {
               <button
                 onClick={handleRefresh}
                 disabled={isRefreshing}
-                className="text-xs font-semibold text-brand-600 hover:text-brand-700 disabled:opacity-50"
+                className="text-xs font-semibold text-rose-900 hover:text-rose-950 disabled:opacity-50"
                 title="Refresh profile from backend"
               >
                 {isRefreshing ? 'Refreshing...' : 'Refresh'}
@@ -198,20 +198,20 @@ export const DashboardPage: React.FC = () => {
             <div className="space-y-2.5 pt-1">
               <Link
                 to="/change-password"
-                className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 hover:border-brand-300 hover:bg-brand-50/50 transition-all group"
+                className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 hover:border-rose-300 hover:bg-rose-50/50 transition-all group"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-rose-100 text-rose-900 flex items-center justify-center">
                     <KeyRound className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-800 block group-hover:text-brand-700">
+                    <span className="text-xs font-bold text-slate-800 block group-hover:text-rose-900">
                       Change Password
                     </span>
                     <span className="text-[11px] text-slate-400">Update current login credentials</span>
                   </div>
                 </div>
-                <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-brand-600" />
+                <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-rose-900" />
               </Link>
 
               <button

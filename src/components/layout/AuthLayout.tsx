@@ -25,12 +25,12 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
       {/* Dedicated Clean Auth Header — NO store navbar */}
       <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 pt-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-maroon-900 via-rose-800 to-rose-700 flex items-center justify-center text-white shadow-md shadow-maroon-900/25 group-hover:scale-105 transition-transform duration-300">
+          <div className="w-10 h-10 rounded-2xl bg-[#881337] bg-gradient-to-tr from-rose-950 via-[#881337] to-rose-700 flex items-center justify-center text-white shadow-md shadow-rose-950/25 group-hover:scale-105 transition-transform duration-300">
             <span className="font-serif font-black text-base italic tracking-tighter text-amber-200">SV</span>
           </div>
           <div>
-            <span className="text-xl font-serif font-extrabold tracking-tight text-slate-900 group-hover:text-maroon-800 transition-colors">
-              Siya <span className="text-maroon-800">Vastra</span>
+            <span className="text-xl font-serif font-extrabold tracking-tight text-slate-900 group-hover:text-rose-900 transition-colors">
+              Siya <span className="text-[#881337]">Vastra</span>
             </span>
           </div>
         </Link>
@@ -49,14 +49,14 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
           {/* Left Brand Showcase Panel (Visible on lg screens) */}
           <div className="hidden lg:flex lg:col-span-5 flex-col justify-between space-y-8 pr-4">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-rose-200 text-maroon-900 text-xs font-semibold shadow-sm">
-                <Sparkles className="w-4 h-4 text-maroon-700" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-rose-200 text-rose-950 text-xs font-semibold shadow-sm">
+                <Sparkles className="w-4 h-4 text-[#881337]" />
                 <span>{badge}</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
                 Welcome to{' '}
-                <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-maroon-900 via-rose-800 to-maroon-700">
+                <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-rose-950 via-[#881337] to-rose-700">
                   Siya Vastra
                 </span>
                 .

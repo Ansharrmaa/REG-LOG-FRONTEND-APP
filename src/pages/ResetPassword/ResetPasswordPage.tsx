@@ -84,7 +84,7 @@ export const ResetPasswordPage: React.FC = () => {
           </p>
           <Link
             to="/forgot-password"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 text-white font-semibold text-sm shadow-sm hover:bg-brand-700 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#881337] hover:bg-rose-950 text-white font-semibold text-sm shadow-md transition-colors"
           >
             <span>Request New Reset Code</span>
             <ArrowRight className="w-4 h-4" />

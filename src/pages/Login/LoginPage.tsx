@@ -151,7 +151,7 @@ export const LoginPage: React.FC = () => {
 
           <Link
             to="/forgot-password"
-            className="font-medium text-maroon-800 hover:text-maroon-900 hover:underline"
+            className="font-medium text-rose-900 hover:text-rose-950 hover:underline"
           >
             Forgot password?
           </Link>
@@ -173,7 +173,7 @@ export const LoginPage: React.FC = () => {
           New to Siya Vastra?{' '}
           <Link
             to="/register"
-            className="font-semibold text-maroon-800 hover:text-maroon-900 hover:underline"
+            className="font-semibold text-rose-900 hover:text-rose-950 hover:underline"
           >
             Create an account
           </Link>

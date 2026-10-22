@@ -166,7 +166,7 @@ export const HomePage: React.FC = () => {
                 <div className="flex flex-wrap items-center gap-4 pt-2">
                   <a
                     href="#featured-collections"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-maroon-900 via-rose-800 to-maroon-800 text-white font-semibold text-sm shadow-lg shadow-maroon-900/25 hover:shadow-maroon-900/35 hover:scale-[1.02] active:scale-[0.99] transition-all"
+                    className="btn-maroon-solid inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-sm shadow-lg shadow-rose-950/25 hover:shadow-rose-950/35 hover:scale-[1.02] active:scale-[0.99] transition-all"
                   >
                     <span>Explore Collections</span>
                     <ArrowRight className="w-4 h-4" />
@@ -175,7 +175,7 @@ export const HomePage: React.FC = () => {
                   {!isAuthenticated && (
                     <Link
                       to="/register"
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl glass-surface-elevated text-maroon-950 font-semibold text-sm hover:bg-white transition-all shadow-sm border border-rose-200/60"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-rose-50 text-rose-950 font-semibold text-sm transition-all shadow-sm border border-rose-200/80"
                     >
                       <span>Join The Privé Club</span>
                     </Link>
@@ -393,7 +393,7 @@ export const HomePage: React.FC = () => {
 
                       <button
                         onClick={() => alert(`Added "${product.name}" to cart!`)}
-                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-maroon-900 hover:bg-maroon-950 text-white text-xs font-semibold transition-colors shadow-sm"
+                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#881337] hover:bg-rose-950 text-white text-xs font-semibold transition-colors shadow-sm"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>Add</span>
@@ -509,7 +509,7 @@ export const HomePage: React.FC = () => {
                   />
                   <button
                     type="submit"
-                    className="px-6 py-3 rounded-2xl bg-gradient-to-r from-maroon-900 to-rose-800 hover:from-maroon-950 hover:to-rose-900 text-white font-semibold text-sm shadow-md transition-colors flex-shrink-0"
+                    className="btn-maroon-solid px-6 py-3 rounded-2xl font-semibold text-sm shadow-md transition-colors flex-shrink-0"
                   >
                     Join Privé
                   </button>
