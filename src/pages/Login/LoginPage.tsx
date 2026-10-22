@@ -72,9 +72,8 @@ export const LoginPage: React.FC = () => {
         localStorage.removeItem(REMEMBER_IDENTIFIER_KEY);
       }
 
-      // Navigate to intended destination or dashboard
-      const origin = (location.state as { from?: { pathname: string } })?.from?.pathname || '/dashboard';
-      navigate(origin, { replace: true });
+      // Navigate directly to Home Page upon successful login
+      navigate('/', { replace: true });
     } catch (err: unknown) {
       const error = err as ApiError;
       if (error.status === 429) {

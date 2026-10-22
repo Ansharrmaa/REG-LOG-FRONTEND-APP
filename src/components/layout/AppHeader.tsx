@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   ShoppingBag,
   LogOut,
-  KeyRound,
   Heart,
   Sparkles,
   Menu,
@@ -97,24 +96,12 @@ export const AppHeader: React.FC = () => {
           {/* Authentication State */}
           {isAuthenticated && user ? (
             <div className="flex items-center gap-2">
-              <Link
-                to="/dashboard"
-                className="flex items-center gap-2 px-3 py-1.5 rounded-xl glass-surface-elevated text-xs font-semibold text-slate-800 hover:bg-white transition-colors"
-              >
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl glass-surface-elevated text-xs font-semibold text-slate-800">
                 <div className="w-6 h-6 rounded-lg bg-amber-700 text-white flex items-center justify-center text-xs font-bold">
                   {user.fullName.charAt(0).toUpperCase()}
                 </div>
                 <span className="hidden sm:inline">{user.fullName.split(' ')[0]}</span>
-              </Link>
-
-              <Link
-                to="/change-password"
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-colors"
-                title="Change Password"
-              >
-                <KeyRound className="w-3.5 h-3.5 text-slate-500" />
-                <span>Security</span>
-              </Link>
+              </div>
 
               <button
                 onClick={handleLogout}
@@ -184,13 +171,9 @@ export const AppHeader: React.FC = () => {
           <div className="pt-3 border-t border-slate-200/80 flex items-center justify-between">
             {isAuthenticated ? (
               <div className="flex items-center justify-between w-full">
-                <Link
-                  to="/dashboard"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-semibold text-slate-800"
-                >
-                  Member Dashboard
-                </Link>
+                <span className="text-xs font-semibold text-slate-800">
+                  Welcome, {user?.fullName}
+                </span>
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);

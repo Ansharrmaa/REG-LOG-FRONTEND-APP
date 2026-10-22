@@ -1,6 +1,6 @@
 import React from 'react';
-import { Sparkles, ShieldCheck, Truck, Scissors, Star } from 'lucide-react';
-import { AppHeader } from './AppHeader';
+import { Link } from 'react-router-dom';
+import { Sparkles, ShieldCheck, Truck, Scissors, Star, ArrowLeft } from 'lucide-react';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -16,13 +16,33 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
   badge = 'Siya Vastra Privé Access',
 }) => {
   return (
-    <div className="min-h-screen flex flex-col selection:bg-amber-600 selection:text-white relative overflow-hidden">
+    <div className="min-h-screen flex flex-col selection:bg-amber-600 selection:text-white relative overflow-hidden bg-[#fdfbf7]">
       {/* Ambient background glow elements for Glassmorphism */}
       <div className="absolute top-10 left-10 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-orange-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-rose-200/25 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-      <AppHeader />
+      {/* Dedicated Clean Auth Header — NO store navbar */}
+      <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 pt-6 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-700 via-orange-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-800/20 group-hover:scale-105 transition-transform duration-300">
+            <span className="font-serif font-black text-base italic tracking-tighter">SV</span>
+          </div>
+          <div>
+            <span className="text-xl font-serif font-extrabold tracking-tight text-slate-900 group-hover:text-amber-800 transition-colors">
+              Siya <span className="text-amber-700">Vastra</span>
+            </span>
+          </div>
+        </Link>
+
+        <Link
+          to="/"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-amber-800 px-3 py-1.5 rounded-xl glass-pill hover:bg-white transition-all"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span>Back to Home</span>
+        </Link>
+      </div>
 
       <main className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-10">
         <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

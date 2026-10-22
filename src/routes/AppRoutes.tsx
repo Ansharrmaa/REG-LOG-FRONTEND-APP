@@ -1,13 +1,11 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { ProtectedRoute, PublicOnlyRoute } from '@/components/layout/ProtectedRoute';
+import { PublicOnlyRoute } from '@/components/layout/ProtectedRoute';
 import { LoginPage } from '@/pages/Login/LoginPage';
 import { RegisterPage } from '@/pages/Register/RegisterPage';
 import { ForgotPasswordPage } from '@/pages/ForgotPassword/ForgotPasswordPage';
 import { VerifyOtpPage } from '@/pages/VerifyOtp/VerifyOtpPage';
 import { ResetPasswordPage } from '@/pages/ResetPassword/ResetPasswordPage';
-import { DashboardPage } from '@/pages/Dashboard/DashboardPage';
-import { ChangePasswordPage } from '@/pages/ChangePassword/ChangePasswordPage';
 import { HomePage } from '@/pages/Home/HomePage';
 
 export const AppRoutes: React.FC = () => {
@@ -58,23 +56,9 @@ export const AppRoutes: React.FC = () => {
         }
       />
 
-      {/* Protected Routes */}
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <DashboardPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/change-password"
-        element={
-          <ProtectedRoute>
-            <ChangePasswordPage />
-          </ProtectedRoute>
-        }
-      />
+      {/* Protected routes redirect to Home Page */}
+      <Route path="/dashboard" element={<Navigate to="/" replace />} />
+      <Route path="/change-password" element={<Navigate to="/" replace />} />
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />
