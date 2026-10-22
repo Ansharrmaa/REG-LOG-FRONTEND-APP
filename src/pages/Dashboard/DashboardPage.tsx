@@ -53,31 +53,38 @@ export const DashboardPage: React.FC = () => {
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Welcome Banner */}
-        <div className="bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl mb-8 relative overflow-hidden">
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial-gradient from-brand-500/20 to-transparent pointer-events-none" />
+        <div className="bg-gradient-to-r from-amber-950 via-slate-900 to-amber-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl mb-8 relative overflow-hidden glass-surface-elevated border border-amber-900/20">
+          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial-gradient from-amber-500/20 to-transparent pointer-events-none" />
 
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-xs font-semibold backdrop-blur-sm border border-brand-500/30">
-                <Sparkles className="w-3.5 h-3.5 text-brand-400" />
-                <span>Verified Customer Profile</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold backdrop-blur-sm border border-amber-500/30">
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <span>Siya Vastra Privé Circle Member</span>
               </div>
-              <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                Hello, {user.fullName}!
+              <h1 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight">
+                Welcome back, {user.fullName}!
               </h1>
-              <p className="text-slate-300 text-sm max-w-xl">
-                Your NovaShop customer session is active and secured with cryptographically signed
-                HttpOnly authentication cookies and server-side session tracking.
+              <p className="text-amber-100/80 text-sm max-w-xl font-light">
+                Your Siya Vastra privileged account is active. Manage your bespoke tailoring orders,
+                view curated festive recommendations, and keep your security settings up to date.
               </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
               <Link
-                to="/change-password"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs backdrop-blur-sm border border-white/10 transition-all active:scale-[0.98]"
+                to="/"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs transition-all shadow-md active:scale-[0.98]"
               >
-                <KeyRound className="w-4 h-4 text-brand-300" />
-                <span>Change Password</span>
+                <span>Shop Heritage Store</span>
+              </Link>
+
+              <Link
+                to="/change-password"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs backdrop-blur-sm border border-white/20 transition-all active:scale-[0.98]"
+              >
+                <KeyRound className="w-4 h-4 text-amber-300" />
+                <span>Security</span>
               </Link>
 
               <button

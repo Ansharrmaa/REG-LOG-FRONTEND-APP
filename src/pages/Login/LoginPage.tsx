@@ -14,7 +14,7 @@ import { loginSchema, LoginFormData } from '@/schemas/authSchemas';
 import { useAuth } from '@/context/AuthContext';
 import { ApiError } from '@/types/auth';
 
-const REMEMBER_IDENTIFIER_KEY = 'novashop_saved_identifier';
+const REMEMBER_IDENTIFIER_KEY = 'siyavastra_saved_identifier';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -165,13 +165,13 @@ export const LoginPage: React.FC = () => {
             isLoading={isSubmitting}
             icon={<LogIn className="w-4 h-4" />}
           >
-            Sign In to NovaShop
+            Sign In to Siya Vastra
           </PrimaryButton>
         </div>
 
         {/* Register prompt */}
         <div className="text-center pt-3 text-sm text-slate-500">
-          New to NovaShop?{' '}
+          New to Siya Vastra?{' '}
           <Link
             to="/register"
             className="font-semibold text-brand-600 hover:text-brand-700 hover:underline"

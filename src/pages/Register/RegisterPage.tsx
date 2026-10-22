@@ -75,9 +75,9 @@ export const RegisterPage: React.FC = () => {
 
   return (
     <AuthLayout
-      title="Create your account"
-      subtitle="Sign up for exclusive deals, order tracking, and fast checkout."
-      badge="Customer Registration"
+      title="Join Siya Vastra"
+      subtitle="Create your account to experience handcrafted luxury and exclusive member access."
+      badge="Privé Circle Membership"
     >
       {successMessage && (
         <div className="mb-6">
@@ -189,7 +189,7 @@ export const RegisterPage: React.FC = () => {
             isLoading={isSubmitting}
             icon={<UserPlus className="w-4 h-4" />}
           >
-            Create NovaShop Account
+            Create Siya Vastra Account
           </PrimaryButton>
         </div>
 

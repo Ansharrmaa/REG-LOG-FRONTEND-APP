@@ -37,7 +37,9 @@ describe('RegisterPage Component', () => {
   it('renders all registration form inputs and password requirements', async () => {
     renderRegisterPage();
 
-    expect(await screen.findByRole('heading', { name: /create your account/i })).toBeInTheDocument();
+    expect(
+      await screen.findByRole('heading', { name: /create your account|join siya vastra/i })
+    ).toBeInTheDocument();
     expect(screen.getByLabelText(/full name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/10-digit mobile number/i)).toBeInTheDocument();
@@ -74,7 +76,7 @@ describe('RegisterPage Component', () => {
     await user.type(screen.getByLabelText(/^password/i), 'SecurePass@123');
     await user.type(screen.getByLabelText(/confirm password/i), 'SecurePass@123');
 
-    const submitBtn = screen.getByRole('button', { name: /create novashop account/i });
+    const submitBtn = screen.getByRole('button', { name: /create siya vastra account/i });
     await user.click(submitBtn);
 
     await waitFor(() => {
@@ -103,7 +105,7 @@ describe('RegisterPage Component', () => {
     await user.type(screen.getByLabelText(/^password/i), 'SecurePass@123');
     await user.type(screen.getByLabelText(/confirm password/i), 'SecurePass@123');
 
-    const submitBtn = screen.getByRole('button', { name: /create novashop account/i });
+    const submitBtn = screen.getByRole('button', { name: /create siya vastra account/i });
     await user.click(submitBtn);
 
     expect(
